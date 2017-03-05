@@ -149,6 +149,36 @@ abline(h=0)&lt;/code&gt;&lt;/pre&gt;
     </item>
     
     <item>
+      <title>March 7, 2017 - Pre-Class</title>
+      <link>/post/march-7-2017-pre-class/</link>
+      <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/march-7-2017-pre-class/</guid>
+      <description>&lt;!-- BLOGDOWN-HEAD --&gt;
+&lt;!-- /BLOGDOWN-HEAD --&gt;
+
+&lt;!-- BLOGDOWN-BODY-BEFORE --&gt;
+&lt;!-- /BLOGDOWN-BODY-BEFORE --&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mean.jackknife &amp;lt;- function(a_vector) {
+  a&amp;lt;-rep(0,length(a_vector))
+  for (i in 1:length(a_vector)){
+    a[i]&amp;lt;-mean(a_vector[-i])
+  }
+  jackknife.variance&amp;lt;-((length(a_vector) - 1)/length(a_vector)) * sum((a - mean(a))^2)
+  jackknife.stderr&amp;lt;-sqrt(jackknife.variance)
+  return(jackknife.stderr)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;some_normals &amp;lt;- rnorm(100,mean=7,sd=5)
+mean(some_normals)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 7.085951&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;(formula_se_of_mean &amp;lt;- sd(some_normals)/sqrt(length(some_normals)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.4508902&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;all.equal(formula_se_of_mean,mean.jackknife(some_normals))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>/about/</link>
       <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>

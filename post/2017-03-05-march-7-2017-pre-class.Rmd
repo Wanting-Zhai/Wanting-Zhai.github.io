@@ -1,0 +1,26 @@
+---
+title: March 7, 2017 - Pre-Class
+author: Wanting Zhai
+date: '2017-03-05'
+slug: march-7-2017-pre-class
+---
+
+```{r}
+mean.jackknife <- function(a_vector) {
+  a<-rep(0,length(a_vector))
+  for (i in 1:length(a_vector)){
+    a[i]<-mean(a_vector[-i])
+  }
+  jackknife.variance<-((length(a_vector) - 1)/length(a_vector)) * sum((a - mean(a))^2)
+  jackknife.stderr<-sqrt(jackknife.variance)
+  return(jackknife.stderr)
+}
+```
+
+
+```{r}
+some_normals <- rnorm(100,mean=7,sd=5)
+mean(some_normals)
+(formula_se_of_mean <- sd(some_normals)/sqrt(length(some_normals)))
+all.equal(formula_se_of_mean,mean.jackknife(some_normals))
+```

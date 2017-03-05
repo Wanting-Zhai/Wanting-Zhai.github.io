@@ -1,7 +1,8 @@
 ---
-title: February 28, 2017 - In-Class Project
-author: Wanting Zhai
+title: "February 28, 2017 - In-Class Project"
+author: "Wanting Zhai"
 date: '2017-03-05'
+output: pdf_document
 slug: february-28-2017-in-class-project
 ---
 
