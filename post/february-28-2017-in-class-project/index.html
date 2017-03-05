@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.18.1" />
+  <meta name="author" content="Wanting Zhai">
+  <meta name="description" content="Biostatistics Master Student">
+
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Wanting Zhai">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Wanting Zhai">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="/post/february-28-2017-in-class-project/">
+
+  
+
+  <title>February 28, 2017 - In-Class Project | Wanting Zhai</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Wanting Zhai</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+  <div class="article-container">
+    <h1 itemprop="name">February 28, 2017 - In-Class Project</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2017-03-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Sun, Mar 5, 2017
+    </time>
+  </span>
+
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2ffebruary-28-2017-in-class-project%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=February%2028%2c%202017%20-%20In-Class%20Project&amp;url=%2fpost%2ffebruary-28-2017-in-class-project%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2ffebruary-28-2017-in-class-project%2f&amp;title=February%2028%2c%202017%20-%20In-Class%20Project"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2ffebruary-28-2017-in-class-project%2f&amp;title=February%2028%2c%202017%20-%20In-Class%20Project"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=February%2028%2c%202017%20-%20In-Class%20Project&amp;body=%2fpost%2ffebruary-28-2017-in-class-project%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      <div id="part1" class="section level3">
+<h3>part1</h3>
+</div>
+<div id="section" class="section level3">
+<h3>1</h3>
+<pre class="r"><code>ckm_nodes=read.csv(&quot;ckm_nodes.csv&quot;)</code></pre>
+</div>
+<div id="section-1" class="section level3">
+<h3>2</h3>
+<pre class="r"><code>table(ckm_nodes$adoption_date,exclude = NULL)</code></pre>
+<pre><code>## 
+##    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15 
+##   11    9    9   11   11   11   13    7    4    1    5    3    3    4    4 
+##   16   17  Inf &lt;NA&gt; 
+##    2    1   16  121</code></pre>
+<p>16 doctors never prescribed tetracycline.</p>
+<p>121 doctor “NA”</p>
+</div>
+<div id="section-2" class="section level3">
+<h3>3</h3>
+<pre class="r"><code>index=which(!is.na(ckm_nodes$adoption_date))
+length(index)</code></pre>
+<pre><code>## [1] 125</code></pre>
+<pre class="r"><code>cleaned_nodes=ckm_nodes[c(index),]</code></pre>
+</div>
+<div id="section-3" class="section level3">
+<h3>4</h3>
+<pre class="r"><code>adopters=function(month,not.yet=FALSE){
+  if (not.yet==FALSE){
+    return(as.vector(cleaned_nodes$adoption_date==month))
+  }
+  else {
+    return(as.vector(cleaned_nodes$adoption_date&gt;month))
+  }
+}
+
+adopters(month=14,not.yet=TRUE)</code></pre>
+<pre><code>##   [1] FALSE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE
+##  [12] FALSE FALSE  TRUE FALSE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE
+##  [23] FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE
+##  [34] FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE
+##  [45] FALSE FALSE FALSE FALSE FALSE  TRUE FALSE  TRUE FALSE FALSE FALSE
+##  [56] FALSE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE
+##  [67]  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+##  [78] FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE  TRUE
+##  [89]  TRUE FALSE  TRUE FALSE FALSE  TRUE FALSE  TRUE  TRUE FALSE FALSE
+## [100] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE FALSE
+## [111] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+## [122] FALSE FALSE FALSE  TRUE</code></pre>
+<pre class="r"><code>sum(adopters(month=14,not.yet=TRUE))</code></pre>
+<pre><code>## [1] 23</code></pre>
+</div>
+<div id="section-4" class="section level3">
+<h3>5</h3>
+<pre class="r"><code>matrix=read.table(&quot;ckm_network.dat&quot;)
+clean_network=matrix[index,index]</code></pre>
+</div>
+<div id="section-5" class="section level3">
+<h3>6</h3>
+<pre class="r"><code>contact=apply(clean_network,1,sum)</code></pre>
+</div>
+<div id="part2" class="section level3">
+<h3>Part2</h3>
+</div>
+<div id="section-6" class="section level3">
+<h3>7</h3>
+</div>
+<div id="a" class="section level3">
+<h3>a</h3>
+<pre class="r"><code>count_peer_pressure=function(index,month){
+  sum((cleaned_nodes[which(clean_network[index]==1),2]&lt;=month))
+}
+count_peer_pressure(37,5)</code></pre>
+<pre><code>## [1] 3</code></pre>
+</div>
+<div id="b" class="section level3">
+<h3>b</h3>
+<pre class="r"><code>prop_peer_pressure=function(index,month){
+  if (count_peer_pressure(index,month)==0){
+    return(NaN)
+  } else{
+    m=count_peer_pressure(index,month)
+  m/length((cleaned_nodes[which(clean_network[index]==1),2]&lt;=month))
+  }
+}
+
+prop_peer_pressure(37,5)</code></pre>
+<pre><code>## [1] 0.6</code></pre>
+<pre class="r"><code>prop_peer_pressure(102,14)</code></pre>
+<pre><code>## [1] NaN</code></pre>
+</div>
+<div id="section-7" class="section level3">
+<h3>8</h3>
+</div>
+<div id="a-1" class="section level3">
+<h3>a</h3>
+<pre class="r"><code>average_peer_pressure=function(month){
+m1=which(adopters(month))
+v1=vector(mode=&quot;numeric&quot;,length=length(m1))
+
+ for (i in 1:length(m1)){
+   v1[i]=prop_peer_pressure(m1[i],month)
+ }
+ mean1=mean(v1,na.rm=T)
+ 
+ m2=which(adopters(month,not.yet=TRUE))
+ v2=vector(mode=&quot;numeric&quot;,length=length(m2))
+ for (i in 1:length(m2)){
+   v2[i]=prop_peer_pressure(m2[i],month)
+ }
+mean2=mean(v2,na.rm=T)
+ 
+return(c(mean1,mean2))
+}</code></pre>
+</div>
+<div id="b-1" class="section level3">
+<h3>b</h3>
+<pre class="r"><code>month=matrix(1:17,nrow = 17, ncol = 1)
+result=apply(month,1,function(x) average_peer_pressure(x))
+plot(result[1,1:17],type=&quot;l&quot;)
+lines(result[2,1:17],type=&quot;l&quot;,col=&quot;red&quot;,ylab=&quot;Proportion&quot;)
+legend(&quot;bottomright&quot;,c(&quot;in that month&quot;,&quot;after that month&quot;),lwd=1,col=c(1,2))</code></pre>
+<p><img src="/post/2017-03-05-february-28-2017-in-class-project_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<pre class="r"><code>difference=result[1,1:17]-result[2,1:17]
+plot(difference,type=&quot;l&quot;,ylab=&quot;Proportion Difference&quot;)
+abline(h=0)</code></pre>
+<p><img src="/post/2017-03-05-february-28-2017-in-class-project_files/figure-html/unnamed-chunk-10-2.png" width="672" /></p>
+<p>Not necessary. Since proportion difference sometimes is less than 0 and sometimes is larger than 0.</p>
+</div>
+
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="/post/2016-12-30-hello-markdown/"><span
+      aria-hidden="true">&larr;</span> A Plain Markdown Post</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+<section id="comments">
+  <div id="disqus_thread">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'wanting-zhai';
+    var disqus_identifier = '\/post\/february-28-2017-in-class-project\/';
+    var disqus_title = 'February 28, 2017 - In-Class Project';
+    var disqus_url = '\/post\/february-28-2017-in-class-project\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2016 Your Name &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="/js/jquery-1.12.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/isotope.pkgd.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    <script async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+    
+
+  </body>
+</html>
+

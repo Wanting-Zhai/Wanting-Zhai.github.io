@@ -1,0 +1,120 @@
+---
+title: February 28, 2017 - In-Class Project
+author: Wanting Zhai
+date: '2017-03-05'
+slug: february-28-2017-in-class-project
+---
+###part1
+###1
+```{r}
+ckm_nodes=read.csv("ckm_nodes.csv")
+```
+
+###2
+```{r}
+table(ckm_nodes$adoption_date,exclude = NULL)
+```
+
+16 doctors never prescribed tetracycline.
+
+121 doctor "NA"
+
+
+###3
+```{r}
+index=which(!is.na(ckm_nodes$adoption_date))
+length(index)
+cleaned_nodes=ckm_nodes[c(index),]
+```
+
+###4
+```{r}
+adopters=function(month,not.yet=FALSE){
+  if (not.yet==FALSE){
+    return(as.vector(cleaned_nodes$adoption_date==month))
+  }
+  else {
+    return(as.vector(cleaned_nodes$adoption_date>month))
+  }
+}
+
+adopters(month=14,not.yet=TRUE)
+sum(adopters(month=14,not.yet=TRUE))
+```
+
+
+###5
+```{r}
+matrix=read.table("ckm_network.dat")
+clean_network=matrix[index,index]
+```
+
+###6
+```{r}
+contact=apply(clean_network,1,sum)
+```
+
+###Part2
+###7
+###a
+```{r}
+count_peer_pressure=function(index,month){
+  sum((cleaned_nodes[which(clean_network[index]==1),2]<=month))
+}
+count_peer_pressure(37,5)
+```
+
+###b
+```{r}
+prop_peer_pressure=function(index,month){
+  if (count_peer_pressure(index,month)==0){
+    return(NaN)
+  } else{
+    m=count_peer_pressure(index,month)
+  m/length((cleaned_nodes[which(clean_network[index]==1),2]<=month))
+  }
+}
+
+prop_peer_pressure(37,5)
+prop_peer_pressure(102,14)
+```
+
+
+###8
+###a
+```{r}
+average_peer_pressure=function(month){
+m1=which(adopters(month))
+v1=vector(mode="numeric",length=length(m1))
+
+ for (i in 1:length(m1)){
+   v1[i]=prop_peer_pressure(m1[i],month)
+ }
+ mean1=mean(v1,na.rm=T)
+ 
+ m2=which(adopters(month,not.yet=TRUE))
+ v2=vector(mode="numeric",length=length(m2))
+ for (i in 1:length(m2)){
+   v2[i]=prop_peer_pressure(m2[i],month)
+ }
+mean2=mean(v2,na.rm=T)
+ 
+return(c(mean1,mean2))
+}
+```
+
+
+###b
+```{r}
+month=matrix(1:17,nrow = 17, ncol = 1)
+result=apply(month,1,function(x) average_peer_pressure(x))
+plot(result[1,1:17],type="l")
+lines(result[2,1:17],type="l",col="red",ylab="Proportion")
+legend("bottomright",c("in that month","after that month"),lwd=1,col=c(1,2))
+difference=result[1,1:17]-result[2,1:17]
+plot(difference,type="l",ylab="Proportion Difference")
+abline(h=0)
+```
+
+Not necessary. Since proportion difference sometimes is less than 0 and sometimes is larger than 0.
+
