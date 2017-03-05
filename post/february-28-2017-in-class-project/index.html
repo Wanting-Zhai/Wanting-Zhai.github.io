@@ -303,8 +303,8 @@ return(c(mean1,mean2))
 <h3>b</h3>
 <pre class="r"><code>month=matrix(1:17,nrow = 17, ncol = 1)
 result=apply(month,1,function(x) average_peer_pressure(x))
-plot(result[1,1:17],type=&quot;l&quot;,ylab=&quot;Proportion&quot;)
-lines(result[2,1:17],type=&quot;l&quot;,col=&quot;red&quot;)
+plot(result[1,1:17],type=&quot;l&quot;)
+lines(result[2,1:17],type=&quot;l&quot;,col=&quot;red&quot;,ylab=&quot;Proportion&quot;)
 legend(&quot;bottomright&quot;,c(&quot;in that month&quot;,&quot;after that month&quot;),lwd=1,col=c(1,2))</code></pre>
 <p><img src="/post/2017-03-05-february-28-2017-in-class-project_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <pre class="r"><code>difference=result[1,1:17]-result[2,1:17]
@@ -322,9 +322,6 @@ abline(h=0)</code></pre>
 <div class="container">
   <nav>
   <ul class="pager">
-    
-    <li class="previous"><a href="/post/2015-07-23-r-rmarkdown/"><span
-      aria-hidden="true">&larr;</span> Hello R Markdown</a></li>
     
 
     

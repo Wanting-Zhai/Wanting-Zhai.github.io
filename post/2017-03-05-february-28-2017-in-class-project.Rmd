@@ -4,6 +4,7 @@ author: Wanting Zhai
 date: '2017-03-05'
 slug: february-28-2017-in-class-project
 ---
+
 ###part1
 ###1
 ```{r}
@@ -108,8 +109,8 @@ return(c(mean1,mean2))
 ```{r}
 month=matrix(1:17,nrow = 17, ncol = 1)
 result=apply(month,1,function(x) average_peer_pressure(x))
-plot(result[1,1:17],type="l",ylab="Proportion")
-lines(result[2,1:17],type="l",col="red")
+plot(result[1,1:17],type="l")
+lines(result[2,1:17],type="l",col="red",ylab="Proportion")
 legend("bottomright",c("in that month","after that month"),lwd=1,col=c(1,2))
 difference=result[1,1:17]-result[2,1:17]
 plot(difference,type="l",ylab="Proportion Difference")
@@ -117,4 +118,3 @@ abline(h=0)
 ```
 
 Not necessary. Since proportion difference sometimes is less than 0 and sometimes is larger than 0.
-
