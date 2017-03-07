@@ -135,6 +135,10 @@
     <div id="profile">
 
       
+      <div class="portrait" itemprop="image"
+           style="background-image: url('/img/DSC_0081.JPG');">
+      </div>
+      
 
       <div class="portrait-title">
         <h2 itemprop="name">Wanting Zhai</h2>
@@ -424,9 +428,9 @@
 }</code></pre>
 <pre class="r"><code>some_normals &lt;- rnorm(100,mean=7,sd=5)
 mean(some_normals)</code></pre>
-<pre><code>## [1] 7.359351</code></pre>
+<pre><code>## [1] 6.593656</code></pre>
 <pre class="r"><code>(formula_se_of_mean &lt;- sd(some_normals)/sqrt(length(some_normals)))</code></pre>
-<pre><code>## [1] 0.4284603</code></pre>
+<pre><code>## [1] 0.4629826</code></pre>
 <pre class="r"><code>all.equal(formula_se_of_mean,mean.jackknife(some_normals))</code></pre>
 <pre><code>## [1] TRUE</code></pre>
 
